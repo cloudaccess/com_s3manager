@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="component" version="1.5.0">
-<name>S3 Media Manager</name>
+<name>S3 Manager</name>
 <author>CloudAccess.net</author>
 <creationDate>2009-08-27</creationDate>
 <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
