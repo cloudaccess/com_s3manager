@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+<name>S3 Media Manager</name>
+<author>CloudAccess.net</author>
+<creationDate>2009-08-27</creationDate>
+<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+<!-- The version string is recorded in the components table -->
+<version>1.0</version>
+<!-- The description is optional and defaults to the name -->
+<description>Use media on S3 with Joomla!</description> 
+<uninstall>
+<sql>
+<file driver="mysql" charset="utf8">uninstall.mysql.sql</file>
+</sql>
+</uninstall>
+<!-- Custom Install Script to execute -->
+<installfile>install.s3manager.php</installfile>
+    <!-- Custom Uninstall Script to execute -->
+<uninstallfile>uninstall.s3manager.php</uninstallfile>
+  
+
+<!-- Site Main File Copy Section -->
+<files folder="component">
+<filename>index.html</filename>
+</files>
+  <!-- Language -->
+
+<administration>
+	<menu link="option=com_s3manager" img="components/com_s3manager/assets/s3manager-16.png">S3 Media Manager</menu>
+	 <!-- Administration Main File Copy Section -->
+	<files>
+		<filename>s3manager.xml</filename>
+	</files>
+	<files folder="administrator">
+		<filename>install.mysql.sql</filename>
+		<filename>uninstall.mysql.sql</filename>
+		<filename>s3manager.php</filename>
+		<filename>controller.php</filename>
+		<filename>config.xml</filename>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+		<folder>elements</folder>
+		<folder>assets</folder>
+	</files>
+  </administration>
+</install>
