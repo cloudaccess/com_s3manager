@@ -10,6 +10,6 @@
 	<version>1.0</version>
 	<description>S3 media manager content plgin</description>
 	<files>
-		<filename plugin="mmsef">s3content.php</filename>
+		<filename plugin="s3content">s3content.php</filename>
 	</files>
 </install>
