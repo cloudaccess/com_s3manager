@@ -52,6 +52,25 @@ function failOperation(id, msg)
 }
 
 
+function showBubbleBox(text, e)
+{
+	if(!e)
+	{
+		e = window.event;
+	}
+	var box = $('bubble-box');
+	box.innerHTML = text + '<button id="bubble-box-close" onclick="$(\'bubble-box\').style.display=\'none\'; return false;" />X</button>';
+	box.style.position = 'absolute';
+//	box.style.left = (e.clientX + window.pageXOffset).toString() + 'px';
+//	box.style.top = (e.clientY + window.pageYOffset).toString() + 'px';
+	box.style.left = (window.mouseX).toString() + 'px';
+	box.style.top = (window.mouseY).toString() + 'px';
+	box.style.z_index = '123';
+	box.style.display='block';
+}
+
+//////////////////////////////////////////////////////////////////
+
 /* Shows list of buckets */
 function showBuckets() {
 	startOperation('show-buckets', 'Reading list of buckets');
@@ -248,19 +267,7 @@ function uploadSubmitted(file, extension)
 	updatePendingOperations();
 }
 
-function showBubbleBox(text)
-{
-	var box = $('bubble-box');
-	box.innerHTML = text + '<button id="bubble-box-close" onclick="$(\'bubble-box\').style.display=\'none\'; return false;" />X</button>';
-	box.style.position = 'absolute';
-	box.style.left = window.event.clientX.toString() + 'px';
-	box.style.top = window.event.clientY.toString() + 'px';
-	box.style.z_index = '123';
-	box.style.display='block';
-}
-
-
-function showURLBox(root, bucket, obj)
+function showURLBox(root, bucket, obj, e)
 {
 	showBubbleBox('Please use this URL when inserting link to media in articles:<br><input id="bubble-box-url" type="text" size="50" value="' + root + 'administrator/index.php?option=com_s3manager&amp;task=redir&amp;bucket=' + escape(bucket) + '&amp;object=' + escape(obj) + '" />');
 	$('bubble-box-url').addEventListener('focus', function(e){
@@ -272,6 +279,23 @@ function showURLBox(root, bucket, obj)
 			}, false);
 }
 
+/* Store mouse position */
+window.addEvent('mousemove', function(e) {	var posx = 0;
+		var posy = 0;
+		if (!e) var e = window.event;
+		if (e.pageX || e.pageY) 	{
+		posx = e.pageX;
+		posy = e.pageY;
+		}
+		else if (e.clientX || e.clientY) 	{
+		posx = e.clientX + document.body.scrollLeft
+		+ document.documentElement.scrollLeft;
+		posy = e.clientY + document.body.scrollTop
+		+ document.documentElement.scrollTop;
+		}
+		window.mouseX = posx;
+		window.mouseY = posy;
+		});
 
 /* Preload the gay ajax loader */
 if(document.images)
@@ -282,4 +306,4 @@ if(document.images)
 
 /* Show buckets on start */
 window.addEvent('domready', function() {document.pendingOperations = 0;showBuckets();});
-//window.addEvent('domready', function() {showBucket('gdr'); });
+window.addEvent('domready', function() {showBucket('gdr'); });

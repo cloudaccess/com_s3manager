@@ -26,7 +26,7 @@
   <!-- Language -->
 
 <administration>
-	<menu link="option=com_s3manager" img="components/com_s3manager/assets/s3manager-16.png">S3 Media Manager</menu>
+	<menu link="option=com_s3manager" img="components/com_s3manager/assets/s3manager-16x16.png">S3 Media Manager</menu>
 	 <!-- Administration Main File Copy Section -->
 	<files>
 		<filename>s3manager.xml</filename>
