@@ -7,7 +7,7 @@ $mainframe->registerEvent('onAfterRender', 'plgSystemS3');
 
 function s3_handle_url($arr)
 {
-	return $arr[1] . S3Helper::getAuthenticatedURL($arr[4], $arr[6]);
+	return $arr[1] . str_replace('&', '&amp;', S3Helper::getAuthenticatedURL($arr[4], $arr[6]));
 }
 
 function plgSystemS3()

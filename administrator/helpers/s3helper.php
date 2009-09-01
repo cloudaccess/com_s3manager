@@ -16,8 +16,14 @@ class S3Helper
 			{
 				$access = $params->get('accessKey');
 				$secret = $params->get('secretKey');
-
-				self::$s3 = new S3($access, $secret);
+				if(strlen($access) && strlen($secret))
+				{
+					self::$s3 = new S3($access, $secret);
+				}
+				else
+				{
+					self::$s3 = NULL;
+				}
 			}
 			else
 			{
