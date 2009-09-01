@@ -18,13 +18,10 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 function com_uninstall()
   {
 	$db=&JFactory::getDBO();
-	$db->setQuery('DELETE FROM #__plugins WHERE `element`=\'salesforce\' AND `folder`=\'user\'');
+	$db->setQuery('DELETE FROM #__plugins WHERE `element`=\'s3system\' AND `folder`=\'system\'');
 	$db->query();
   ?>
-<div class="header">Salesforce is sucessfully removed </div>
-<p>
-  Bye.
-</p>
+<div class="header">S3 Media Manager for Joomla! is sucessfully removed </div>
 <?php
   }
 ?>
