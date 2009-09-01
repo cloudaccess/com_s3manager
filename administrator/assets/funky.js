@@ -282,4 +282,4 @@ if(document.images)
 
 /* Show buckets on start */
 window.addEvent('domready', function() {document.pendingOperations = 0;showBuckets();});
-window.addEvent('domready', function() {showBucket('gdr'); });
+//window.addEvent('domready', function() {showBucket('gdr'); });
