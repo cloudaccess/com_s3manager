@@ -43,6 +43,7 @@
 		<folder>views</folder>
 		<folder>elements</folder>
 		<folder>assets</folder>
+		<folder>plugin-system</folder>
 	</files>
   </administration>
 </install>
