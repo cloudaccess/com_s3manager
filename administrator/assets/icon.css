@@ -1,1 +1,24 @@
-.icon-48-s3manager_title { background: url(s3manager-48.png) no-repeat left; }
+.icon-48-s3manager_title { background: url(s3manager-48x48.png) no-repeat left; }
+.file-div {
+	float: left;
+	margin: 1em;
+	border: 1px gray solid;
+	padding: 1em;
+	width: 96px;
+	height: 96px;
+	overflow: hidden;
+}
+.upload {
+}
+.upload-queue-element {
+	width: 100%;
+	background: #eee;
+	font-size: 12pt;
+	font-weight: 600em;
+}
+.upload-queue-element-error {
+	width: 100%;
+	background: #f88;
+	font-size: 12pt;
+	font-weight: 600em;
+}

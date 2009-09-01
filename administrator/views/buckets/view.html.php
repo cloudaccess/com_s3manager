@@ -21,7 +21,7 @@ jimport( 'joomla.application.component.view');
  * @static
  * @package S3Manager
  */
-class S3ManagerViewS3Manager extends JView
+class S3ManagerViewBuckets extends JView
 {
 	function display($tpl = null)
 	{
@@ -33,6 +33,11 @@ class S3ManagerViewS3Manager extends JView
 		
 		if(sizeof($params))
 		{
+			$access = $params->get('accessKey');
+			$secret = $params->get('secretKey');
+
+			$s3 = new S3($access, $secret);
+			$this->assign('buckets', $s3->listBuckets());
 		}
 		else
 		{

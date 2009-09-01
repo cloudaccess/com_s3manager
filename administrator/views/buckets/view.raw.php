@@ -21,7 +21,7 @@ jimport( 'joomla.application.component.view');
  * @static
  * @package S3Manager
  */
-class S3ManagerViewS3Manager extends JView
+class S3ManagerViewBuckets extends JView
 {
 	function display($tpl = null)
 	{
@@ -29,10 +29,21 @@ class S3ManagerViewS3Manager extends JView
 
 		$db =& JFactory::getDBO();
 		$uri =& JFactory::getURI();
-		$params = JComponentHelper::getParams('com_s3manager');
+		$s3 = S3Helper::getS3();
 		
-		if(sizeof($params))
+		if($s3)
 		{
+			$buckets = $s3->listBuckets(0);
+			$this->assignRef('buckets', $buckets);
+
+			$locations = array();
+			foreach($buckets as $buck)
+			{
+				$locations[$buck] = $s3->getBucketLocation($buck);
+			}
+#			$distributions = S3Helper::getDistributions();
+			$this->assignRef('locations', $locations);
+#			$this->assignRef('distributions', $distributions);
 		}
 		else
 		{

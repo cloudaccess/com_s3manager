@@ -18,6 +18,9 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 // Require the base controller
   require_once (JPATH_COMPONENT.DS.'controller.php');
+  require_once (JPATH_COMPONENT.DS.'helpers/s3helper.php');
+  require_once (JPATH_COMPONENT.DS.'helpers/base32.php');
+  $wait = '<img src="components/com_s3manager/assets/ajax-loader.gif" />';
   
  $controller = new S3ManagerController( );
  

@@ -2,16 +2,9 @@
 <config>
 	<params>
 		<param name="@spacer" type="spacer" default="Login options" />
-		<param name="adminLogin" type="text" default="" label="Admin login" description="Enter salesforce administrator user's email here" size="50" />
-		<param name="adminPassword" type="password" default="" label="Admin password" description="Enter password for given salesforce admin account" size="50" />
-		<param name="adminToken" type="text" default="" label="Token" description="Log into salesforce, go to Setup - My Personal Information - Reset My Security Token to obtain the token" size="50"/>
-		<param name="wsdl" type="radio" default="partner" label="Service type" description="WSDL type to be used">
-			<option value="partner">Partner</option>
-			<option value="enterprise">Enterprise</option>
-		</param>
-		<param name="@spacer" type="spacer" default="Notification email options" description="When new users are created, they are sent an email with login details." />
-		<param name="welcomeSubject" type="text" label="Email subject" default="Your new Joomla! account" description="The following placeholders are available: %EMAIL%, %PASSWORD%, %FIRSTNAME%, %LASTNAME%" />
-		<param name="welcomeBody" type="textarea" label="Email body" default="Hi %FIRSTNAME% %LASTNAME%,&#10;&#10;We have created an account for you. When visiting our page you can log in with username %EMAIL% and password %PASSWORD%&#10;&#10;-- &#10;Greetings" description="This is a template.&#10;The following placeholders are available: %EMAIL%, %PASSWORD%, %FIRSTNAME%, %LASTNAME%" rows="5" cols="60" />
-		<param name="bccEmail" type="text" label="Send copies to" default="" description="If you enter an email address here, this address will receive copies of all emails sent to users" />
+		<param name="accessKey" type="text" default="" label="Access key" description="Access key from Amazon.com" size="30" />
+		<param name="secretKey" type="password" default="" label="Secret key" description="Secret key from Amazon.com" size="30" />
+		<param name="@spacer" type="spacer" default="Link options" />
+		<param name="linkValidityPeriod" type="text" default="28800" label="Link validity period" description="Links visible at the frontpage will only be valid for a limited period of time. In seconds." size="30" />
 	</params>
 </config>

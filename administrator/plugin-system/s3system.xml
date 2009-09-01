@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>Content - S3 Media Manager</name>
+	<author>CloudAccess.net</author>
+	<creationDate>2009</creationDate>
+	<copyright>Copyright (C) CloudAccess.net</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>andrew@cloudaccess.net</authorEmail>
+	<authorUrl>www.cloudaccess.net</authorUrl>
+	<version>1.0</version>
+	<description>S3 media manager system plgin</description>
+	<files>
+		<filename plugin="s3system">s3system.php</filename>
+	</files>
+</install>
