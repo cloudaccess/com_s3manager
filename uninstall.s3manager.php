@@ -20,6 +20,8 @@ function com_uninstall()
 	$db=&JFactory::getDBO();
 	$db->setQuery('DELETE FROM #__plugins WHERE `element`=\'s3system\' AND `folder`=\'system\'');
 	$db->query();
+	$db->setQuery('DROP TABLE #__s3_linkcache');
+	$db->query();
   ?>
 <div class="header">S3 Media Manager for Joomla! is sucessfully removed </div>
 <?php
