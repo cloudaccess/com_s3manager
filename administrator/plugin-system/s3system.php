@@ -18,7 +18,7 @@ function plgSystemS3()
 		return true;
 	}
 
-	$regex = '#(["\']).*?administrator/index\\.php\\?option=com_s3manager&(amp;)?task=redir&(amp;)?bucket=(.+?)&(amp;)?object=([^"\']+)#';
+	$regex = '#(["\'])administrator/index\\.php\\?option=com_s3manager&(amp;)?task=redir&(amp;)?bucket=(.+?)&(amp;)?object=([^"\']+)#';
 
 	$buffer = JResponse::getBody();
     $buffer = preg_replace_callback($regex, 's3_handle_url', $buffer);
