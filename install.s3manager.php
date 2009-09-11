@@ -52,6 +52,22 @@ By <img src="http://cloudaccess.net/images/stories/logo_small_png.png" alt="Clou
 	}
 	echo "<p>Updating plugin database: ".$db->stdErr() . "</p>";
 
+	$sql="CREATE TABLE IF NOT EXISTS `#__s3_linkcache` (
+	`bucket` varchar(255) NOT NULL,
+	`object` varchar(255) NOT NULL,
+	`expires` int(11) NOT NULL,
+	`link` text NOT NULL,
+	PRIMARY KEY  (`bucket`,`object`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+		";
+	$db->setQuery($sql);
+	if(!$db->query())
+	{
+		$errors++;
+	}
+	echo "<p>Creating cache table: ".$db->stdErr() . "</p>";
+
+
 	if($errors == 0)
 	{
 		echo "<h2>Success.</h2>";
