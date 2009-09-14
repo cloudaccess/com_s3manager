@@ -130,7 +130,7 @@ pQIDAQAB
 		}
 		else
 		{
-			$rv = array('success' => false, 'error' => 'Bad s3 params');
+			$rv = array('success' => false, 'error' => 'Bad s3 access keys. Go to parameters and change settings.');
 		}
 		$rv['bucket'] = $_REQUEST['bucket'];
 
