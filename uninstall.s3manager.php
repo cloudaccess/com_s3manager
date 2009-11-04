@@ -18,7 +18,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 function com_uninstall()
   {
 	$db=&JFactory::getDBO();
-	$db->setQuery('DELETE FROM #__plugins WHERE `element`=\'s3system\' AND `folder`=\'system\'');
+	$db->setQuery('DELETE FROM #__plugins WHERE `element`=\'s3system\'');
 	$db->query();
 	$db->setQuery('DROP TABLE #__s3_linkcache');
 	$db->query();

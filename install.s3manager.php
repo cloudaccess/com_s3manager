@@ -67,6 +67,12 @@ By <img src="http://cloudaccess.net/images/stories/logo_small_png.png" alt="Clou
 	}
 	echo "<p>Creating cache table: ".$db->stdErr() . "</p>";
 
+	if(!function_exists('curl_exec'))
+	{
+		$errors++;
+		echo "<p style=\"color: red\">cURL library not found - S3 Media Manger won't function at all.</p>";
+	}
+
 
 	if($errors == 0)
 	{
@@ -74,7 +80,7 @@ By <img src="http://cloudaccess.net/images/stories/logo_small_png.png" alt="Clou
 	}
 	else
 	{
-		echo "<h2>Failure</h2><p>$errors errors were encountered during installation. Please solve problems causing these errors and install again.</p>";
+		echo "<h2>Failure</h2><p>$errors errors were encountered during installation. Please solve problems causing these errors and install again.</p><p>CloudAccess.net professional support services will probably be able to help you - contact <a href=\"mailto:support@cloudaccess.net\">support@cloudaccess.net</a></p>";
 	}
   }
 ?>
