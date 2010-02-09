@@ -19,7 +19,7 @@ class S3Helper
 				$secret = $params->get('secretKey');
 				if(strlen($access) && strlen($secret))
 				{
-					self::$s3 = new S3($access, $secret);
+					self::$s3 = new com_s3manager_S3($access, $secret);
 				}
 				else
 				{

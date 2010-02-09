@@ -34,7 +34,7 @@
 * @link http://undesigned.org.za/2007/10/22/amazon-s3-php-class
 * @version 0.4.0
 */
-class S3 {
+class com_s3manager_S3 {
 	// ACL flags
 	const ACL_PRIVATE = 'private';
 	const ACL_PUBLIC_READ = 'public-read';
