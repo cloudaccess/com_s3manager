@@ -65,10 +65,10 @@ class S3ManagerController extends JController
 		$rv = array();
 		if($s3)
 		{                              
-			$acl = S3::ACL_PRIVATE;
+			$acl = com_s3manager_S3::ACL_PRIVATE;
 			$dists =& S3Helper::getDistributions();
 			if(isset($dists[$_REQUEST['bucket']]))
-				$acl = S3::ACL_PUBLIC_READ;
+				$acl = com_s3manager_S3::ACL_PUBLIC_READ;
 			$file = $_FILES['file']['tmp_name'];
 			$s3rv = $s3->putObject($s3->inputFile($file), $_REQUEST['bucket'], basename($_FILES['file']['name']), $acl, array(), array( "Cache-Control" => "max-age=315360"));
 			if($s3rv)
