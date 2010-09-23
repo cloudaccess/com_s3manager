@@ -1,4 +1,11 @@
 <?php
+/**
+ * @package S3 Manager System Plugin for Joomla! 1.5
+ * @version $Id$
+ * @author Cloudaccess.net
+ * @copyright (C) 2009- Cloudacces.net
+ * @license GNU/GPLv2 http://www.gnu.org/licenses/gpl-2.0.html
+**/
 defined( '_JEXEC' ) or die( 'Restricted access' );
 require_once(JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_s3manager' . DS . 'helpers' . DS . 's3helper.php');
 
