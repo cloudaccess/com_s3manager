@@ -5,7 +5,6 @@ require_once('S3.php');
 class S3Helper
 {
 	static private $s3;
-	private $configFields;
 
 	static function getS3()
 	{
