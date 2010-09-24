@@ -1,0 +1,10 @@
+This is a Joomla! 1.5 component that allows you to manage media placed on Amazon Simple Storage Service (S3), and use it on your webpage. It used to be a commercial component by http://cloudaccess.net/ but now is open sourced as a gift to Joomla! community.
+
+Media management features:
+* Create and delete buckets
+* Upload and delete files to buckets
+* Links presented in the frontend have only limited lifespan, that you can configure.
+
+For a more complete description, take a look at documentation: http://github.com/downloads/cloudaccess/com_s3manager/documentation.pdf
+
+
