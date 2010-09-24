@@ -3,6 +3,7 @@ This is a Joomla! 1.5 component that allows you to manage media placed on Amazon
 Media management features:
 * Create and delete buckets
 * Upload and delete files to buckets
+* Transparently use S3-hosted files in your articles
 * Links presented in the frontend have only limited lifespan, that you can configure.
 
 For a more complete description, take a look at documentation: http://github.com/downloads/cloudaccess/com_s3manager/documentation.pdf
